@@ -1,0 +1,65 @@
+nav[id='MainIntroBox'] {
+  width: 100%;
+  height: 600px;
+
+  background-image: url(../외부자료/공부.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+div[id='Intro'] {
+  display: flex;
+  position: absolute;
+  background-color: #00000042;
+  width: 100%;
+  height: 600px;
+  justify-content: center;
+}
+
+div[id='MainIntroName'] {
+  margin-top: 120px;
+  position: absolute;
+  display: inline-block;
+  text-align: center;
+  font-size: 45px;
+  color: white;
+  font-weight: 900;
+  width: 100%;
+  text-shadow: 5px 5px 2px rgba(0, 0, 0, 0.498);
+}
+
+div[id='MainIntroRect'] {
+  position: absolute;
+  display: inline-block;
+  width: 200px;
+  height: 5px;
+  top: calc(300px);
+  background-color: coral;
+}
+
+div[id='IntroDescription'] {
+  position: absolute;
+  display: inline-block;
+  font-size: 20px;
+  text-align: center;
+  top: calc(53%);
+  color: white;
+  font-weight: 600;
+}
+
+div[id='IntroNextMoveButton'] {
+  display: inline-block;
+  position: absolute;
+  width: 175px;
+  height: 60px;
+  background-color: coral;
+  border-radius: 10%;
+
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+  font-weight: 900;
+  text-align: center;
+  place-content: center;
+  top: calc(90% - 50px);
+}

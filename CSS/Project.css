@@ -1,0 +1,166 @@
+#ProjectBox {
+  display: flex;
+  width: 100%;
+  height: 800px;
+
+  background-color: gray;
+  justify-content: center;
+}
+
+#ProjectsTitle {
+  display: inline-block;
+  position: absolute;
+  margin-top: 35px;
+  font-size: 40px;
+  font-weight: 900;
+}
+
+#ProjectsTitleUnderline {
+  position: absolute;
+  background-color: black;
+  width: 200px;
+  height: 2px;
+  margin-top: 90px;
+}
+
+#ProjectsTitleClipImg {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  transform: translate(-130px, 42px);
+  background-image: url(../외부자료/AboutMe/클립.jpg);
+  background-size: cover;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+#ProjectContentBox {
+  display: flex;
+  position: absolute;
+  width: 800px;
+  height: 600px;
+  margin-top: 125px;
+
+  justify-content: center;
+}
+
+#SliceBox_2 {
+  scale: 1.14;
+  transform: translate(6.1%, 6.1%) !important;
+}
+
+#SliceBox_2_RightButton {
+  display: none !important;
+}
+
+#SliceBox_2_LeftButton {
+  display: none !important;
+}
+
+#SelectSliceButton_2 {
+  transform: translate(50px, 20px) !important;
+}
+/*======================================================*/
+#MainBox_3 {
+  transform: translate(20px);
+}
+
+#SliceBox_3 {
+  scale: 1.14;
+  transform: translate(6.1%, 6.1%) !important;
+  border-radius: 20px;
+}
+
+#SliceBox_3_RightButton {
+  display: none !important;
+}
+
+#SliceBox_3_LeftButton {
+  display: none !important;
+}
+
+#SelectSliceButton_3 {
+  transform: translate(30px, 20px) !important;
+}
+/*======================================================*/
+/*여기서 부터 설정 시작*/
+
+div[id*='ProjectImgDiv_'] {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+}
+
+div[id*='ProjectImgFile_'] {
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+div[id*='ProjectMainTextBox_'] {
+  display: inline-block;
+  position: absolute;
+}
+div[id*='ProjectSubTextBox_'] {
+  display: inline-block;
+  position: absolute;
+}
+
+@media (min-width: 800px) {
+  div[id*='ProjectImgDiv_'] {
+    width: 350px;
+    height: 200px;
+    top: calc(50px);
+    right: calc(50% - 175px);
+  }
+
+  div[id*='ProjectMainTextBox_'] {
+    width: 400px;
+    height: 300px;
+    left: calc(20px);
+    border-right: 2px solid gray;
+    bottom: calc(10px);
+  }
+  div[id*='ProjectSubTextBox_'] {
+    width: 350px;
+    height: 300px;
+    bottom: calc(10px);
+    right: calc(20px);
+  }
+
+  #MainBox_3 {
+    display: none !important;
+  }
+}
+
+@media (max-width: 800px) {
+  #MainBox_2 {
+    display: none !important;
+  }
+
+  div[id*='ProjectImgDiv_'] {
+    width: 350px;
+    height: 200px;
+    top: calc(50px);
+    right: calc(50% - 175px);
+  }
+
+  div[id*='ProjectMainTextBox_'] {
+    width: 400px;
+    height: 300px;
+    left: calc(0px);
+    bottom: calc(300px);
+  }
+  div[id*='ProjectSubTextBox_'] {
+    width: 350px;
+    height: 300px;
+    bottom: calc(20px);
+    left: calc(0px);
+  }
+
+  #ProjectBox {
+    height: 1150px;
+  }
+}

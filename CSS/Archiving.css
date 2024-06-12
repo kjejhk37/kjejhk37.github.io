@@ -1,0 +1,161 @@
+#ArchivingBox {
+  display: flex;
+  width: 100%;
+  height: 600px;
+  justify-content: center;
+
+  background-color: rgb(126, 197, 126);
+}
+
+#SelectSliceButtonContain_0 {
+  background-color: rgb(126, 197, 126) !important;
+}
+
+#ArcivingTitle {
+  display: inline-block;
+  position: absolute;
+  margin-top: 40px;
+  font-size: 40px;
+  font-weight: 900;
+}
+
+#ArcivingTitleUnderline {
+  position: absolute;
+  background-color: black;
+  width: 200px;
+  height: 2px;
+  margin-top: 95px;
+}
+
+#ArchivingTitleClipImg {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  transform: translate(-130px, 45px);
+  background-image: url(../외부자료/AboutMe/클립.jpg);
+  background-size: cover;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+#MainBox_0 {
+  margin-top: 150px;
+}
+
+div[id*='ArchvingImg_'] {
+  display: inline-block;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  margin-top: 30px;
+}
+
+div[id*='MainDescriteDiv_'] {
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  height: 50px;
+
+  top: 150px;
+
+  text-align: center;
+  font-size: 18px;
+  place-content: center;
+}
+
+div[id*='SubDescriteDiv_'] {
+  display: inline-block;
+  position: absolute;
+  width: 400px;
+  height: 150px;
+  place-content: center;
+
+  left: calc(50% - 200px);
+  top: 190px;
+}
+
+div[id*='hrefLinkDiv_'] {
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#ArchvingImg_0 {
+  width: 200px;
+  background-image: url(/외부자료/Archiving/GitHub\ 로고.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  right: calc(50% - 100px);
+}
+
+#ArchvingImg_1 {
+  width: 230px;
+  background-image: url(/외부자료/Archiving/Naver\ 로고.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  right: calc(50% - 115px);
+}
+
+#ArchvingImg_2 {
+  width: 200px;
+  background-image: url(/외부자료/Archiving/GitHub\ 로고.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  right: calc(50% - 100px);
+}
+
+#ArchvingImg_3 {
+  width: 230px;
+  background-image: url(/외부자료/Archiving/Naver\ 로고.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  right: calc(50% - 115px);
+}
+
+#MainBox_1 {
+  margin-top: 150px;
+}
+
+@media (min-width: 800px) {
+  #MainBox_1 {
+    display: none !important;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 800px) {
+  #SliceBox_0_RightButton {
+    display: none !important;
+  }
+
+  #SliceBox_0_LeftButton {
+    display: none !important;
+  }
+
+  #MainBox_1 {
+    display: none !important;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 700px) {
+  #MainBox_0 {
+    display: none !important;
+  }
+
+  #MainBox_1 {
+    display: inline-block !important;
+  }
+}
+
+@media (max-width: 500px) {
+  #SliceBox_1_RightButton {
+    display: none !important;
+  }
+
+  #SliceBox_1_LeftButton {
+    display: none !important;
+  }
+  #MainBox_0 {
+    display: none !important;
+  }
+}

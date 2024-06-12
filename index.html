@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="CSS/Main_CSS.css" />
+    <link rel="stylesheet" href="CSS/MainIntro.css" />
+    <link rel="stylesheet" href="CSS/AboutMe.css" />
+    <link rel="stylesheet" href="CSS/Skills.css" />
+    <link rel="stylesheet" href="CSS/Archiving.css" />
+    <link rel="stylesheet" href="CSS/Project.css" />
+    <link rel="stylesheet" href="CSS/AnimationCSS.css" />
+
+    <style>
+      #test {
+        background-image: url(/외부자료/Projects/Portfolio.jpg);
+      }
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        margin: 10px;
+      }
+
+      a:link {
+          text-decoration: none;
+          color: black;
+      }
+
+      a:visited {
+        color: black;
+      }
+
+      a:hover{
+        color :coral
+      }
+    </style>
+  </head>
+  <body>
+    <script src="JS/Utility.js"></script>
+    <script src="JS/MainMenu.js"></script>
+    <script src="JS/MainIntro.js"></script>
+    <script src="JS/AboudMe.js"></script>
+    <script src="JS/Skill.js"></script>
+    <script src="JS/SliceAnimation.js"></script>
+    <script src="JS/Archiving.js"></script>
+    <script src="JS/Projects.js"></script>
+
+    <script src="JS/AnimationAlbum.js"></script>
+
+    <!-- 메인 메뉴 -->
+    <script>
+      CreateMainMenu("JSJ's portfolio");
+
+      AddMainMenuItem('About Me');
+      AddMainMenuItem('Skill');
+      AddMainMenuItem('Archiving');
+      AddMainMenuItem('Projects');
+    </script>
+
+    <!-- 메인 인트로 -->
+    <script>
+      CreateMainIntro(
+        '-장성진- \n 개발자 포트폴리오',
+        '안녕하세요 \n 배움을 즐기는 게임 개발자 장성진입니다. \n지속적으로 발전하며\n 공부하는 것 자체를 즐기는 것이 \n 저의 장점입니다.',
+        '더 알아보기'
+      );
+    </script>
+
+    <!-- AboutMe -->
+    <script>
+      CreateAboutMe();
+
+      AddInformationByAboutMe('이름', '장성진', '외부자료/AboutMe/이름.jpg');
+      AddInformationByAboutMe(
+        '생년월일',
+        '1997.10.02',
+        '외부자료/AboutMe/달력.jpg'
+      );
+      AddInformationByAboutMe(
+        '주소지',
+        '경기도 부천시 \n 오정구 작동',
+        '외부자료/AboutMe/주소지.jpg'
+      );
+      AddInformationByAboutMe(
+        '연락처',
+        '010-9430-9861',
+        '외부자료/AboutMe/전화.jpg'
+      );
+      AddInformationByAboutMe(
+        '이메일',
+        '<a href="mailto:kjejhk3597@gmail.com">kjejhk3597@gmail.com</a>',
+        '외부자료/AboutMe/메일.jpg'
+      );
+
+  
+      AddInformationByAboutMe(
+        '학력',
+        '인하대학교 (수학과) \n <a href="https://www.sgaedu.co.kr/index.php">서울게임 아카데미아</a>',
+        '외부자료/AboutMe/학력.jpg'
+      );
+    </script>
+
+    <!-- 스킬 -->
+    <script>
+      CreateSkillBox();
+
+      AddSkillBox('사용 가능한 언어');
+      AddSkillIcon(0, '외부자료/Skills/C++로고.jpg');
+      AddSkillIcon(0, '외부자료/Skills/HMTL\ 로고.png');
+      AddSkillIcon(0, '외부자료/Skills/CSS\ 로고.jpg');
+      AddSkillIcon(0, '외부자료/Skills/JavaScript\ 로고.jpg');
+
+      AddSkillBox('사용 가능한 라이브러리');
+      AddSkillIcon(1, '외부자료/Skills/DirectX\ 로고.jpg');
+      AddSkillIcon(1, '외부자료/Skills/FMod\ 로고.jpg');
+      AddSkillIcon(1, undefined, 'ImGui');
+      AddSkillIcon(1, '외부자료/Skills/OpenCv\ 로고.jpg');
+
+      AddSkillBox('사용 가능한 엔진');
+      AddSkillIcon(2, '외부자료/Skills/Unreal\ 로고.jpg');
+
+      AddSkillBox('공부중인 항목');
+      AddSkillIcon(3, '외부자료/Skills/Unity로고.png');
+      AddSkillIcon(3, '외부자료/Skills/C샵\ 로고.jpg');
+      AddSkillIcon(3, '외부자료/Skills/q-net\ 로고.png');
+    </script>
+
+    <!-- 저장소 -->
+    <script>
+      CreateArciving();
+
+      CreateSliceBox(800, 400, document.getElementById('ArchivingBox'));
+      AddSlice(0);
+      AddSlice(0);
+
+      AddArchivingData(
+        'SliceBoxContent_0_0',
+        '<b>HTML과 CSS, JavaScript</b>를 주로 저장하는 저장소',
+        '<ul><li>공부하며 만든 웹 페이지 JavaScript 소스 코드</li> <li>코딩 연습을 위해 작성한 소스 코드</li><li><a href = "#" style = "color : blue">https://github.com/kjejhk37</a></li></ul>',
+        'https://github.com/kjejhk37'
+      );
+      AddArchivingData(
+        'SliceBoxContent_0_1',
+        '<b>C#, C++ Unreal과 Unity</b>등 공부한 정보들을 모아 놓은 블로그',
+        '<ul><li>학원을 다니며 작성한 소스 코드</li><li>개발에 필요한 정보를 모아둔 저장소</li><li>Unreal, Unity등 게임 엔진 사용 방법을 기록</li><li><a href = "#" style = "color : blue">https://blog.naver.com/kjejhk37</a></li></ul>',
+        'https://blog.naver.com/kjejhk37'
+      );
+
+      CreateSliceBox(450, 400, document.getElementById('ArchivingBox'));
+      AddSlice(1);
+      AddSlice(1);
+
+      AddArchivingData(
+        'SliceBoxContent_1_0',
+        '<b>HTML과 CSS, JavaScript</b>를 \n 주로 저장하는 저장소',
+        '<ul><li>공부하며 만든 웹 페이지 JavaScript \n소스 코드</li> <li>코딩 연습을 위해 작성한 소스 코드</li></ul>',
+        'https://github.com/kjejhk37'
+      );
+      AddArchivingData(
+        'SliceBoxContent_1_1',
+        '<b>C#, C++ Unreal과 Unity</b>등 \n공부한 정보들을 모아 놓은 블로그',
+        '<ul><li>SGA 학원을 다니며 작성한 소스 코드</li><li>개발에 필요한 정보를 모아둔 저장소</li><li>Unreal, Unity등 게임 엔진 사용 방법을 기록</li></ul>',
+        'https://blog.naver.com/kjejhk37'
+      );
+    </script>
+
+    <script>
+      CreateProjectBox();
+
+      CreateSliceBox(900, 630, document.getElementById('ProjectContentBox'));
+      AddSlice(2);
+      AddSlice(2);
+      AddSlice(2);
+      AddSlice(2);
+
+      AddProjectContent(
+        'SliceBoxContent_2_0',
+        '/외부자료/Projects/WOT_Main.png',
+        'https://youtu.be/Osk6CQ883L8'
+      );
+      AddProjectContent(
+        'SliceBoxContent_2_1',
+        '/외부자료/Projects/Unreal_Main.jpg',
+        'https://youtu.be/7Pj3N72hzCc'
+      );
+      AddProjectContent(
+        'SliceBoxContent_2_2',
+        '/외부자료/Projects/Portfolio.jpg'
+      );
+
+      AddProjectContent(
+        'SliceBoxContent_2_3',
+        '/외부자료/Projects/openCvProject_VehicleFind.jpg',
+        'https://youtu.be/MYRuL4uYawM'
+      );
+    </script>
+
+    <div id="Tank 설명" style="margin: 0px 20px 20px 20px">
+      <h3 style="color: coral">World of Tank 모작</h3>
+      <hr style="margin-top: 10px" />
+      <div style="font-size: 13px; margin-top: 5px; line-height: 20px">
+        개발 기간 : 2023.01 ~ 2023.02 (1개월) <br />개발 인원 : 2인 팀
+        프로젝트<br />장르 : Shooting<br />
+        <br />버전 관리 도구 : <b style="color: coral">github</b> <br />
+        사용 라이브러리 :
+        <b style="color: coral">WinAPI, DirectX, ImGui, FMOD</b><br />
+        주요 개발 언어 : <b style="color: coral">C++</b><br /><br />
+        <a
+          href="https://youtu.be/Osk6CQ883L8"
+          style="
+            text-decoration: none;
+            text-align: center;
+            display: block;
+            border: 2px solid black;
+          "
+          >WOT 모작 설명 영상 링크</a
+        >
+      </div>
+    </div>
+    <div id="Tank 추가 설명" style="margin: 0px 20px 20px 20px">
+      <h3 style="color: coral">개발 목적 및 배움</h3>
+      <hr style="margin-top: 10px" />
+      <div style="font-size: 13px; margin-top: 5px; line-height: 20px">
+        월드 오브 탱크 게임을 모작하는 것으로 <br /><b style="color: coral"
+          >WinAPI, DirectX, ImGui, FMOD</b
+        >에 대한 이해도와 <br />
+        경험을 쌓으며 <b style="color: coral">github</b>를 이용한 팀프로젝트를
+        <br />통하여 다른 사람과의 공동 개발을 경험하고 <br />버전 관리 도구를
+        경험하는 것을 목표로<br />
+        개발하였습니다.<br />
+        <br /><b style="color: coral">싱글톤 방식</b>의 디자인 패턴을
+        사용하여<br />
+        팀원과의 개발 구역을 분리하고 데이터를 <br />관리할 수 있었습니다.
+      </div>
+    </div>
+
+    <div id="Unreal 설명" style="margin: 0px 20px 20px 20px">
+      <h3 style="color: coral">Unreal 액션게임</h3>
+      <hr style="margin-top: 10px" />
+      <div style="font-size: 13px; margin-top: 5px; line-height: 20px">
+        개발 기간 : 2023.07 ~ 2023.09 (2개월) <br />개발 인원 : 1명 프로젝트<br />장르
+        : 액션 RPG<br />
+        <br />사용 엔진 : <b style="color: coral">Unreal / Unreal C++</b> <br />
+        <br />
+        <a
+          href="https://youtu.be/7Pj3N72hzCc"
+          style="
+            text-decoration: none;
+            text-align: center;
+            display: block;
+            border: 2px solid black;
+          "
+          >Unreal 액션 게임 모작 설명 영상 링크</a
+        >
+      </div>
+    </div>
+
+    <div id="Unreal 추가 설명" style="margin: 0px 20px 20px 20px">
+      <h3 style="color: coral">개발 목적 및 배움</h3>
+      <hr style="margin-top: 10px" />
+      <div style="font-size: 13px; margin-top: 5px; line-height: 20px">
+        <b style="color: coral">Unreal / Unreal C++</b>를 이용한 게임 제작을
+        경험하고 Unreal에 대한 이해도 및 경험을 쌓는 것을 목표로 개발하였습니다.
+
+        <br />
+        <br />
+        아이템의 상호작용 및 스킬 구현이라는<br />
+        <b style="color: coral"
+          >목표를 정하고 이를 어떻게 구현할지를 고민하고 <br />설계</b
+        >하는 것을 목표로 개발하였습니다.
+        <br />
+        <br />
+        <b style="color: coral">객체지향 프로그래밍 원칙</b>에 중심을 두어<br />
+        개발하였으며 이를 통해서 개발의 확장과 유지보수를 용이하게 할 수
+        있었습니다.
+      </div>
+    </div>
+
+    <div id="페이지 설명" style="margin: 0px 20px 20px 20px">
+      <h3 style="color: coral">포트폴리오 웹 페이지</h3>
+      <hr style="margin-top: 10px" />
+      <div style="font-size: 13px; margin-top: 5px; line-height: 20px">
+        개발 기간 : 2024.05 ~ 2024.05 <br />개발 인원 : 1명<br />기능
+        : 간단한 자기소개, 인적 사항 및 프로젝트 경험 소개<br />
+        <br> 
+        <br />사용 언어 : <b style="color: coral">HTML, CSS, javascript</b> <br />
+        <br />
+    </div>
+    <div id="페이지 추가 설명" style="margin: 0px 20px 20px 20px">
+      <h3 style="color: coral">개발 목적 및 배움</h3>
+      <hr style="margin-top: 10px" />
+      <div style="font-size: 13px; margin-top: 5px; line-height: 20px">
+        마크업 언어  <b style="color: coral">HTML,CSS</b>와 스크립트 언어 <b style="color: coral">JavaScript</b>를 통해서 다양한 언어를 활용하고 사용하는 능력을 향상시키는 것을 목표로 학습 및 개발하였습니다.
+        <br>
+        <br>
+        웹 페이지 개발을 통해서 <b style="color: coral">UI </b>개발 경험 및 능력을 <br>향상시키고 보다 좋은 <b style="color: coral">UX</b>를 제공하는 방법과 <br>디자인을 고민하고 설계하는 것을 <br>목표로 개발하였습니다.
+      </div>
+    </div>
+
+    <div id="OpenCv 설명" style="margin: 0px 20px 20px 20px">
+      <h3 style="color: coral">차량 찾기 프로그램</h3>
+      <hr style="margin-top: 10px" />
+      <div style="font-size: 13px; margin-top: 5px; line-height: 20px">
+        개발 기간 : 2024.06 ~ 2024.06 <br />개발 인원 : 1명<br />기능
+        : 영상으로 부터 차량 검색 및 영상 저장<br />
+        <br> 
+        사용 언어 : <b style="color: coral">C++</b> <br />
+        사용 라이브러리 :  <b style="color: coral">opencv 4.6.0</b> <br />
+        사용 딥러닝 :  <b style="color: coral">YOLOv3</b> <br />
+        <br />
+        <a
+        href="https://youtu.be/MYRuL4uYawM"
+        style="
+          text-decoration: none;
+          text-align: center;
+          display: block;
+          border: 2px solid black;
+        "
+        >객체 찾기 프로그램 영상</a
+      >
+    </div>
+    <div id="OpenCv 추가 설명" style="margin: 0px 20px 20px 20px">
+      <h3 style="color: coral">개발 목적 및 배움</h3>
+      <hr style="margin-top: 10px" />
+      <div style="font-size: 13px; margin-top: 5px; line-height: 20px">
+        이미지 처리 라이브러리  <b style="color: coral">opencv</b>와 딥러닝 <b style="color: coral">YOLOv3</b>를 통해서 영상 처리 기법을 공부하고 딥러닝과 머신러닝에 대해서 공부하고 다루는 것을 목표로 학습 및 개발하였습니다.
+        <br>
+        <br>
+        이미지를 처리하고 영상을 다루며 이를 저장하는 라이브러리인 <b style="color: coral">opencv </b>를 통해서 영상 및 이미지 처리 능력을 향상시키고 <b style="color: coral">YOLO</b>를 공부하고 다루며 <br>딥러닝에 대한 정보를 배우고 이를 학습하고 다루는 능력을 기를 수 있었습니다.
+      </div>
+    </div>
+
+    <script>
+      InputDivToDiv('ProjectMainTextBox_0', 'Tank 설명');
+      InputDivToDiv('ProjectSubTextBox_0', 'Tank 추가 설명');
+
+      InputDivToDiv('ProjectMainTextBox_1', 'Unreal 설명');
+      InputDivToDiv('ProjectSubTextBox_1', 'Unreal 추가 설명');
+
+      InputDivToDiv('ProjectMainTextBox_2', '페이지 설명');
+      InputDivToDiv('ProjectSubTextBox_2', '페이지 추가 설명');
+
+      InputDivToDiv('ProjectMainTextBox_3', 'OpenCv 설명');
+      InputDivToDiv('ProjectSubTextBox_3', 'OpenCv 추가 설명');
+    </script>
+
+<div id="Tank 설명2" style="margin: 0px 20px 20px 20px">
+  <h3 style="color: coral">World of Tank 모작</h3>
+  <hr style="margin-top: 10px" />
+  <div style="font-size: 13px; margin-top: 5px; line-height: 20px">
+    개발 기간 : 2023.01 ~ 2023.02 (1개월) <br />개발 인원 : 2인 팀
+    프로젝트<br />장르 : Shooting<br />
+    <br />버전 관리 도구 : <b style="color: coral">github</b> <br />
+    사용 라이브러리 :
+    <b style="color: coral">WinAPI, DirectX, ImGui, FMOD</b><br />
+    주요 개발 언어 : <b style="color: coral">C++</b><br /><br />
+    <a
+      href="https://youtu.be/Osk6CQ883L8"
+      style="
+        text-decoration: none;
+        text-align: center;
+        display: block;
+        border: 2px solid black;
+      "
+      >WOT 모작 설명 영상 링크</a
+    >
+  </div>
+</div>
+<div id="Tank 추가 설명2" style="margin: 0px 20px 20px 20px">
+  <h3 style="color: coral">개발 목적 및 배움</h3>
+  <hr style="margin-top: 10px" />
+  <div style="font-size: 13px; margin-top: 5px; line-height: 20px">
+    월드 오브 탱크 게임을 모작하는 것으로 <br /><b style="color: coral"
+      >WinAPI, DirectX, ImGui, FMOD</b
+    >에 대한 이해도와 <br />
+    경험을 쌓으며 <b style="color: coral">github</b>를 이용한 팀프로젝트를
+    <br />통하여 다른 사람과의 공동 개발을 경험하고 <br />버전 관리 도구를
+    경험하는 것을 목표로<br />
+    개발하였습니다.<br />
+    <br /><b style="color: coral">싱글톤 방식</b>의 디자인 패턴을
+    사용하여<br />
+    팀원과의 개발 구역을 분리하고 데이터를 <br />관리할 수 있었습니다.
+  </div>
+</div>
+
+<div id="Unreal 설명2" style="margin: 0px 20px 20px 20px">
+  <h3 style="color: coral">Unreal 액션게임</h3>
+  <hr style="margin-top: 10px" />
+  <div style="font-size: 13px; margin-top: 5px; line-height: 20px">
+    개발 기간 : 2023.07 ~ 2023.09 (2개월) <br />개발 인원 : 1명 프로젝트<br />장르
+    : 액션 RPG<br />
+    <br />사용 엔진 : <b style="color: coral">Unreal / Unreal C++</b> <br />
+    <br />
+    <a
+      href="https://youtu.be/7Pj3N72hzCc"
+      style="
+        text-decoration: none;
+        text-align: center;
+        display: block;
+        border: 2px solid black;
+      "
+      >Unreal 액션 게임 모작 설명 영상 링크</a
+    >
+  </div>
+</div>
+
+<div id="Unreal 추가 설명2" style="margin: -50px 20px 20px 20px">
+  <h3 style="color: coral">개발 목적 및 배움</h3>
+  <hr style="margin-top: 10px" />
+  <div style="font-size: 13px; margin-top: 5px; line-height: 20px">
+    <b style="color: coral">Unreal / Unreal C++</b>를 이용한 게임 제작을
+    경험하고 Unreal에 대한 이해도 및 경험을 쌓는 것을 목표로 개발하였습니다.
+
+    <br />
+    <br />
+    아이템의 상호작용 및 스킬 구현이라는<br />
+    <b style="color: coral"
+      >목표를 정하고 이를 어떻게 구현할지를 고민하고 <br />설계</b
+    >하는 것을 목표로 개발하였습니다.
+    <br />
+    <br />
+    <b style="color: coral">객체지향 프로그래밍 원칙</b>에 중심을 두어<br />
+    개발하였으며 이를 통해서 개발의 확장과 유지보수를 용이하게 할 수
+    있었습니다.
+  </div>
+</div>
+
+<div id="페이지 설명2" style="margin: 0px 20px 20px 20px">
+  <h3 style="color: coral">포트폴리오 웹 페이지</h3>
+  <hr style="margin-top: 10px" />
+  <div style="font-size: 13px; margin-top: 5px; line-height: 20px">
+    개발 기간 : 2024.05 ~ 2024.05 <br />개발 인원 : 1명<br />기능
+    : 간단한 자기소개, 인적 사항 및 프로젝트 경험 소개<br />
+    <br> 
+    <br />사용 언어 : <b style="color: coral">HTML, CSS, javascript</b> <br />
+    <br />
+</div>
+<div id="페이지 추가 설명2" style="margin: 0px 20px 20px 20px">
+  <h3 style="color: coral">개발 목적 및 배움</h3>
+  <hr style="margin-top: 10px" />
+  <div style="font-size: 13px; margin-top: 5px; line-height: 20px">
+    마크업 언어  <b style="color: coral">HTML,CSS</b>와 스크립트 언어 <b style="color: coral">JavaScript</b>를 통해서 다양한 언어를 활용하고 사용하는 능력을 향상시키는 것을 목표로 학습 및 개발하였습니다.
+    <br>
+    <br>
+    웹 페이지 개발을 통해서 <b style="color: coral">UI </b>개발 경험 및 능력을 <br>향상시키고 보다 좋은 <b style="color: coral">UX</b>를 제공하는 방법과 <br>디자인을 고민하고 설계하는 것을 <br>목표로 개발하였습니다.
+  </div>
+</div>
+
+<div id="OpenCv 설명2" style="margin: 0px 20px 20px 20px">
+  <h3 style="color: coral">차량 찾기 프로그램</h3>
+  <hr style="margin-top: 10px" />
+  <div style="font-size: 13px; margin-top: 5px; line-height: 20px">
+    개발 기간 : 2024.06 ~ 2024.06 <br />개발 인원 : 1명<br />기능
+    : 영상으로 부터 차량 검색 및 영상 저장<br />
+    <br> 
+    사용 언어 : <b style="color: coral">C++</b> <br />
+    사용 라이브러리 :  <b style="color: coral">opencv 4.6.0</b> <br />
+    사용 딥러닝 :  <b style="color: coral">YOLOv3</b> <br />
+    <br />
+    <a
+    href="https://youtu.be/MYRuL4uYawM"
+    style="
+      text-decoration: none;
+      text-align: center;
+      display: block;
+      border: 2px solid black;
+    "
+    >객체 찾기 프로그램 영상</a
+  >
+</div>
+<div id="OpenCv 추가 설명2" style="margin: 0px 20px 20px 20px">
+  <h3 style="color: coral">개발 목적 및 배움</h3>
+  <hr style="margin-top: 10px" />
+  <div style="font-size: 13px; margin-top: 5px; line-height: 20px">
+    이미지 처리 라이브러리  <b style="color: coral">opencv</b>와 딥러닝 <b style="color: coral">YOLOv3</b>를 통해서 영상 처리 기법을 공부하고 딥러닝과 머신러닝에 대해서 공부하고 다루는 것을 목표로 학습 및 개발하였습니다.
+    <br>
+    <br>
+    이미지를 처리하고 영상을 다루며 이를 저장하는 라이브러리인 <b style="color: coral">opencv </b>를 통해서 영상 및 이미지 처리 능력을 향상시키고 <b style="color: coral">YOLO</b>를 공부하고 다루며 <br>딥러닝에 대한 정보를 배우고 이를 학습하고 다루는 능력을 기를 수 있었습니다.
+  </div>
+</div>
+
+  <script>
+      CreateSliceBox(500, 900, document.getElementById('ProjectContentBox'));
+      AddSlice(3);
+      AddSlice(3);
+      AddSlice(3);
+      AddSlice(3);
+
+      AddProjectContent(
+        'SliceBoxContent_3_0',
+        '/외부자료/Projects/WOT_Main.png',
+        'https://youtu.be/Osk6CQ883L8'
+      );
+      AddProjectContent(
+        'SliceBoxContent_3_1',
+        '/외부자료/Projects/Unreal_Main.jpg',
+        'https://youtu.be/7Pj3N72hzCc'
+      );
+      AddProjectContent(
+        'SliceBoxContent_3_2',
+        '/외부자료/Projects/Portfolio.jpg'
+      );
+
+      AddProjectContent(
+        'SliceBoxContent_3_3',
+        '/외부자료/Projects/openCvProject_VehicleFind.jpg',
+        'https://youtu.be/MYRuL4uYawM'
+      );
+      
+      InputDivToDiv('ProjectMainTextBox_4', 'Tank 설명2');
+      InputDivToDiv('ProjectSubTextBox_4', 'Tank 추가 설명2');
+
+      InputDivToDiv('ProjectMainTextBox_5', 'Unreal 설명2');
+      InputDivToDiv('ProjectSubTextBox_5', 'Unreal 추가 설명2');
+
+      InputDivToDiv('ProjectMainTextBox_6', '페이지 설명2');
+      InputDivToDiv('ProjectSubTextBox_6', '페이지 추가 설명2');
+
+      InputDivToDiv('ProjectMainTextBox_7', 'OpenCv 설명2');
+      InputDivToDiv('ProjectSubTextBox_7', 'OpenCv 추가 설명2');
+  </script>
+
+  <!-- 웹 페이지 내에 움직이는 하이퍼링크 만들기 -->
+  <script>
+    ClickscrollToDiv('MainMenuLogo','Intro');
+    ClickscrollToDiv('MainMenuItem_0','AboutMeTitle');
+    ClickscrollToDiv('MainMenuItem_1','SkillTitle');
+    ClickscrollToDiv('MainMenuItem_2','ArcivingTitle');
+    ClickscrollToDiv('MainMenuItem_3','ProjectsTitle');
+    ClickscrollToDiv('IntroNextMoveButton','AboutMeTitle');
+
+    ClickscrollToDiv('AboutMeTitleClipImg','SkillTitle');
+    ClickscrollToDiv('SkillsTitleClipImg','ArcivingTitle');
+    ClickscrollToDiv('ArchivingTitleClipImg','ProjectsTitle');
+    ClickscrollToDiv('ProjectsTitleClipImg','Intro');
+  </script>
+  </body>
+</html>

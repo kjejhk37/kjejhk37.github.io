@@ -1,0 +1,93 @@
+nav[id='AboutMeBox'] {
+  display: flex;
+  width: 100%;
+  height: 500px;
+  transform: translate(0, 0px);
+  justify-content: center;
+}
+
+#AboutMeTitle {
+  display: inline-block;
+  position: absolute;
+  margin-top: 40px;
+  font-size: 40px;
+  font-weight: 900;
+}
+
+#AboutMeTitleUnderline {
+  position: absolute;
+  background-color: black;
+  width: 200px;
+  height: 2px;
+  margin-top: 90px;
+}
+
+#AboutMeTitleClipImg {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  transform: translate(-130px, 42px);
+  background-image: url(../외부자료/AboutMe/클립.jpg);
+  background-size: cover;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+#AboutMeCententBox {
+  display: flex;
+  width: 900px;
+  height: 300px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 150px;
+}
+
+div[id*='InformationBox_'] {
+  display: flex;
+  width: 260px;
+  height: 150px;
+  justify-content: left;
+  margin: 10px 10px;
+}
+
+div[id*='InformationImage_'] {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 10px 10px;
+}
+
+div[id*='InforamtionMainData_'] {
+  display: inline-block;
+  position: absolute;
+  width: 120px;
+  height: 50px;
+  font-size: 25px;
+  font-weight: 800;
+  margin: 10px 80px;
+}
+
+div[id*='InformationDesData_'] {
+  display: inline-block;
+  position: absolute;
+  text-align: left;
+  width: 170px;
+  height: 50px;
+  font-size: 15px;
+  font-weight: 800;
+  margin: 70px 80px;
+}
+
+@media (max-width: 860px) {
+  nav[id='AboutMeBox'] {
+    height: 700px;
+  }
+}
+
+@media (max-width: 580px) {
+  nav[id='AboutMeBox'] {
+    height: 1200px;
+  }
+}

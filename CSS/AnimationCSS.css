@@ -1,0 +1,31 @@
+@keyframes Select {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  10% {
+    transform: translate(200px, 0px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+div[id*='AnimationAlbumBox_'] {
+  display: inline-block;
+  width: 800px;
+  height: 400px;
+  position: absolute;
+  border: 1px solid blue;
+  margin-top: 400px;
+}
+
+div[id*='AlbumPage_'] {
+  display: inline-block;
+  width: 800px;
+  height: 400px;
+  position: absolute;
+  background-color: white;
+
+  animation-duration: 1s;
+  border: 1px solid green;
+}
